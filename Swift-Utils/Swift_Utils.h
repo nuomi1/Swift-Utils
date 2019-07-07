@@ -2,7 +2,7 @@
 //  Swift_Utils.h
 //  Swift-Utils
 //
-//  Created by nuomi on 4/7/2019.
+//  Created by nuomi1 on 4/7/2019.
 //  Copyright © 2019 nuomi1. All rights reserved.
 //
 

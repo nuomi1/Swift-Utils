@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3121AC2E22CE33E3005C2316 /* Swift_Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3121AC2C22CE33E3005C2316 /* Swift_Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3121AC3622CE34CB005C2316 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121AC3522CE34CB005C2316 /* DateFormat.swift */; };
+		3121AC3822CE35DC005C2316 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121AC3722CE35DC005C2316 /* DateFormatter.swift */; };
+		3121AC3A22CE39C5005C2316 /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121AC3922CE39C5005C2316 /* Date+DateFormatter.swift */; };
+		3121AC3C22CE3D39005C2316 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121AC3B22CE3D39005C2316 /* String+DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3121AC2922CE33E3005C2316 /* Swift_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swift_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3121AC2C22CE33E3005C2316 /* Swift_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swift_Utils.h; sourceTree = "<group>"; };
 		3121AC2D22CE33E3005C2316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3121AC3522CE34CB005C2316 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		3121AC3722CE35DC005C2316 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		3121AC3922CE39C5005C2316 /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
+		3121AC3B22CE3D39005C2316 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +56,20 @@
 			children = (
 				3121AC2C22CE33E3005C2316 /* Swift_Utils.h */,
 				3121AC2D22CE33E3005C2316 /* Info.plist */,
+				3121AC3422CE3442005C2316 /* DateFormatter */,
 			);
 			path = "Swift-Utils";
+			sourceTree = "<group>";
+		};
+		3121AC3422CE3442005C2316 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				3121AC3922CE39C5005C2316 /* Date+DateFormatter.swift */,
+				3121AC3522CE34CB005C2316 /* DateFormat.swift */,
+				3121AC3722CE35DC005C2316 /* DateFormatter.swift */,
+				3121AC3B22CE3D39005C2316 /* String+DateFormatter.swift */,
+			);
+			path = DateFormatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +115,7 @@
 				TargetAttributes = {
 					3121AC2822CE33E3005C2316 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -131,6 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3121AC3A22CE39C5005C2316 /* Date+DateFormatter.swift in Sources */,
+				3121AC3C22CE3D39005C2316 /* String+DateFormatter.swift in Sources */,
+				3121AC3822CE35DC005C2316 /* DateFormatter.swift in Sources */,
+				3121AC3622CE34CB005C2316 /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +285,7 @@
 		3121AC3222CE33E3005C2316 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 975KA7D567;
@@ -276,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.nuomi1.Swift-Utils";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +311,7 @@
 		3121AC3322CE33E3005C2316 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 975KA7D567;

@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3121AC2E22CE33E3005C2316 /* Swift_Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3121AC2C22CE33E3005C2316 /* Swift_Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3121AC3622CE34CB005C2316 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121AC3522CE34CB005C2316 /* DateFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3121AC2922CE33E3005C2316 /* Swift_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swift_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3121AC2C22CE33E3005C2316 /* Swift_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swift_Utils.h; sourceTree = "<group>"; };
 		3121AC2D22CE33E3005C2316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3121AC3522CE34CB005C2316 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +50,17 @@
 			children = (
 				3121AC2C22CE33E3005C2316 /* Swift_Utils.h */,
 				3121AC2D22CE33E3005C2316 /* Info.plist */,
+				3121AC3422CE3442005C2316 /* DateFormatter */,
 			);
 			path = "Swift-Utils";
+			sourceTree = "<group>";
+		};
+		3121AC3422CE3442005C2316 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				3121AC3522CE34CB005C2316 /* DateFormat.swift */,
+			);
+			path = DateFormatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3121AC3622CE34CB005C2316 /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

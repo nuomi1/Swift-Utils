@@ -43,8 +43,8 @@ public extension DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat.rawValue
 
-        DateFormatter.dateFormatters.setObject(dateFormatter,
-                                               forKey: cacheKey)
+        dateFormatters.setObject(dateFormatter,
+                                 forKey: cacheKey)
 
         return dateFormatter
     }
@@ -62,8 +62,8 @@ public extension DateFormatter {
         dateFormatter.dateStyle = dateStyle
         dateFormatter.timeStyle = timeStyle
 
-        DateFormatter.dateFormatters.setObject(dateFormatter,
-                                               forKey: cacheKey)
+        dateFormatters.setObject(dateFormatter,
+                                 forKey: cacheKey)
 
         return dateFormatter
     }

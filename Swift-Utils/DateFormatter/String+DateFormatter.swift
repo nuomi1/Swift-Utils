@@ -10,7 +10,8 @@ import Foundation
 
 public extension String {
     func date(dateFormat: DateFormatter.DateFormat) -> Date? {
-        return DateFormatter.formatter(dateFormat: dateFormat)
+        return DateFormatter
+            .formatter(dateFormat: dateFormat)
             .date(from: self)
     }
 

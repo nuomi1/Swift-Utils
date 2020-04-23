@@ -32,7 +32,7 @@ private extension DateFormatter {
     }
 }
 
-public extension DateFormatter {
+internal extension DateFormatter {
     static func formatter(dateFormat: DateFormatter.DateFormat) -> DateFormatter {
         let cacheKey = computeCacheKey(dateFormat: dateFormat) as NSString
 

@@ -9,6 +9,7 @@
 import Foundation
 
 public extension Date {
+
     enum FormatStyle {
         case short
         case normal
@@ -33,12 +34,8 @@ public extension Date {
                 return string(dateFormat: .yyyyMMddHHmm)
             }
 
-            let originDays = Calendar.current.ordinality(of: .day,
-                                                         in: .year,
-                                                         for: self)
-            let nowDays = Calendar.current.ordinality(of: .day,
-                                                      in: .year,
-                                                      for: now)
+            let originDays = Calendar.current.ordinality(of: .day, in: .year, for: self)
+            let nowDays = Calendar.current.ordinality(of: .day, in: .year, for: now)
 
             switch nowDays! - originDays! {
             case 3...:
@@ -48,9 +45,7 @@ public extension Date {
             case 1:
                 return "昨天" + string(dateFormat: .HHmm)
             default:
-                let difference = Calendar.current.dateComponents([.hour, .minute],
-                                                                 from: self,
-                                                                 to: now)
+                let difference = Calendar.current.dateComponents([.hour, .minute], from: self, to: now)
 
                 guard difference.hour! < 1 else {
                     return "\(difference.hour!)小时前"
@@ -63,10 +58,7 @@ public extension Date {
                 return "刚刚"
             }
         case .long:
-            return Calendar.current.compare(self,
-                                            to: Date(),
-                                            toGranularity: .year)
-                == .orderedSame
+            return Calendar.current.compare(self, to: Date(), toGranularity: .year) == .orderedSame
                 ? string(dateFormat: .MMddHHmm)
                 : string(dateFormat: .yyyyMMddHHmm)
         }
@@ -74,6 +66,7 @@ public extension Date {
 }
 
 private extension DateFormatter.DateFormat {
+
     static let HHmm: DateFormatter.DateFormat = "HH:mm"
     static let MMddHHmm: DateFormatter.DateFormat = "MM-dd HH:mm"
     static let yyyyMMddHHmm: DateFormatter.DateFormat = "yyyy-MM-dd HH:mm"

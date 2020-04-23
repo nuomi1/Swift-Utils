@@ -27,4 +27,8 @@ platform :ios do
   lane :setup do
     setup_xcodegen
   end
+
+  lane :format do
+    swiftformat
+  end
 end

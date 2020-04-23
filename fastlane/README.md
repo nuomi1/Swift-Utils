@@ -26,6 +26,11 @@ fastlane ios setup_xcodegen
 fastlane ios setup
 ```
 
+### ios format
+```
+fastlane ios format
+```
+
 
 ----
 

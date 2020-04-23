@@ -9,6 +9,7 @@
 import Foundation
 
 public extension DateFormatter {
+
     struct DateFormat: RawRepresentable, ExpressibleByStringLiteral {
         public var rawValue: String
 

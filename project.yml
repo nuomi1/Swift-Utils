@@ -1,0 +1,16 @@
+name: Swift-Utils
+
+attributes:
+  ORGANIZATIONNAME: nuomi1
+
+targets:
+  Swift-Utils:
+    type: framework
+    platform: iOS
+    deploymentTarget: 10.0
+    sources:
+      - Swift-Utils
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.github.nuomi1.Swift-Utils
+        SWIFT_VERSION: 5.0

@@ -8,14 +8,14 @@
 
 import Foundation
 
-private extension DateFormatter {
+extension DateFormatter {
 
-    static let dateFormatters = NSCache<NSString, DateFormatter>()
+    fileprivate static let dateFormatters = NSCache<NSString, DateFormatter>()
 }
 
-private extension DateFormatter {
+extension DateFormatter {
 
-    static func computeCacheKey(dateFormat: DateFormatter.DateFormat) -> String {
+    fileprivate static func computeCacheKey(dateFormat: DateFormatter.DateFormat) -> String {
         return [
             "format",
             dateFormat.rawValue,
@@ -23,7 +23,7 @@ private extension DateFormatter {
         .joined(separator: "|")
     }
 
-    static func computeCacheKey(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
+    fileprivate static func computeCacheKey(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
         return [
             "style",
             String(dateStyle.rawValue),
@@ -33,9 +33,9 @@ private extension DateFormatter {
     }
 }
 
-internal extension DateFormatter {
+extension DateFormatter {
 
-    static func formatter(dateFormat: DateFormatter.DateFormat) -> DateFormatter {
+    internal static func formatter(dateFormat: DateFormatter.DateFormat) -> DateFormatter {
         let cacheKey = computeCacheKey(dateFormat: dateFormat) as NSString
 
         if let dateFormatter = dateFormatters.object(forKey: cacheKey) {
@@ -50,7 +50,7 @@ internal extension DateFormatter {
         return dateFormatter
     }
 
-    static func formatter(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> DateFormatter {
+    internal static func formatter(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> DateFormatter {
         let cacheKey = computeCacheKey(dateStyle: dateStyle, timeStyle: timeStyle) as NSString
 
         if let dateFormatter = dateFormatters.object(forKey: cacheKey) {

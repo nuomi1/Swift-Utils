@@ -8,15 +8,15 @@
 
 import Foundation
 
-public extension Date {
+extension Date {
 
-    enum FormatStyle {
+    public enum FormatStyle {
         case short
         case normal
         case long
     }
 
-    func string(for style: FormatStyle) -> String {
+    public func string(for style: FormatStyle) -> String {
         switch style {
         case .short:
             return string(dateFormat: .HHmm)
@@ -65,9 +65,9 @@ public extension Date {
     }
 }
 
-private extension DateFormatter.DateFormat {
+extension DateFormatter.DateFormat {
 
-    static let HHmm: DateFormatter.DateFormat = "HH:mm"
-    static let MMddHHmm: DateFormatter.DateFormat = "MM-dd HH:mm"
-    static let yyyyMMddHHmm: DateFormatter.DateFormat = "yyyy-MM-dd HH:mm"
+    fileprivate static let HHmm: DateFormatter.DateFormat = "HH:mm"
+    fileprivate static let MMddHHmm: DateFormatter.DateFormat = "MM-dd HH:mm"
+    fileprivate static let yyyyMMddHHmm: DateFormatter.DateFormat = "yyyy-MM-dd HH:mm"
 }

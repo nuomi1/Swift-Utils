@@ -8,9 +8,9 @@
 
 import Foundation
 
-public extension DateFormatter {
+extension DateFormatter {
 
-    struct DateFormat: RawRepresentable, ExpressibleByStringLiteral {
+    public struct DateFormat: RawRepresentable, ExpressibleByStringLiteral {
         public var rawValue: String
 
         public init?(rawValue: String) {

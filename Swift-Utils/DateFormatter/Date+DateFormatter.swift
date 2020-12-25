@@ -8,25 +8,25 @@
 
 import Foundation
 
-public extension Date {
+extension Date {
 
-    func string(dateFormat: DateFormatter.DateFormat) -> String {
+    public func string(dateFormat: DateFormatter.DateFormat) -> String {
         return DateFormatter
             .formatter(dateFormat: dateFormat)
             .string(from: self)
     }
 
-    func string(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
+    public func string(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
         return DateFormatter
             .formatter(dateStyle: dateStyle, timeStyle: timeStyle)
             .string(from: self)
     }
 
-    func string(dateStyle: DateFormatter.Style) -> String {
+    public func string(dateStyle: DateFormatter.Style) -> String {
         return string(dateStyle: dateStyle, timeStyle: .none)
     }
 
-    func string(timeStyle: DateFormatter.Style) -> String {
+    public func string(timeStyle: DateFormatter.Style) -> String {
         return string(dateStyle: .none, timeStyle: timeStyle)
     }
 }

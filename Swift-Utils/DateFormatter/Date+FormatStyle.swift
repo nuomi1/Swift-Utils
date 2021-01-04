@@ -16,6 +16,8 @@ extension Date {
         case long
     }
 
+    // swiftlint:disable cyclomatic_complexity
+
     public func string(for style: FormatStyle) -> String {
         switch style {
         case .short:
@@ -63,6 +65,8 @@ extension Date {
                 : string(dateFormat: .yyyyMMddHHmm)
         }
     }
+
+    // swiftlint:enable cyclomatic_complexity
 }
 
 extension DateFormatter.DateFormat {

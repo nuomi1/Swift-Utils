@@ -6,6 +6,10 @@ excluded:
   - Example/Carthage
   - Example/Pods
 
+included:
+  - Example
+  - Swift-Utils
+
 line_length:
   ignores_comments: true
   ignores_interpolated_strings: true
